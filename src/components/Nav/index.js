@@ -10,7 +10,7 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           <li className={`mx-2 ${!portfolioSelected && "navActive"}`}>
-            <a onClick={() => setPortfolioSelected(false)}>About Me</a>
+            <span onClick={() => setPortfolioSelected(false)}>About Me</span>
           </li>
           <li className={`mx-2 ${portfolioSelected && "navActive"}`}>
             <span onClick={() => setPortfolioSelected(true)}>Portfolio</span>

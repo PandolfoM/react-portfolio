@@ -47,6 +47,10 @@ a {
 	
 }
 
+li span {
+  cursor: pointer;
+}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
