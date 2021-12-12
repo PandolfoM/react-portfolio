@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import images from "./assets/previews/images";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
