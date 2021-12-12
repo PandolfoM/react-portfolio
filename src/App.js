@@ -1,13 +1,17 @@
-import react from "react";
+import react, { useState } from "react";
 import Nav from "./components/Nav";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 
 function App() {
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
   return (
     <div>
-      <Nav></Nav>
+      <Nav
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}></Nav>
       <main>
-        <About></About>
+        {!portfolioSelected ? <About></About> : <Portfolio></Portfolio>}
       </main>
     </div>
   );

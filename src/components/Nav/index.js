@@ -1,6 +1,7 @@
 import react from "react";
 
-function Nav() {
+function Nav(props) {
+  const { portfolioSelected, setPortfolioSelected } = props;
   return (
     <header className="flex-row px-1">
       <h2>
@@ -8,11 +9,11 @@ function Nav() {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about">About Me</a>
+          <li className={`mx-2 ${!portfolioSelected && "navActive"}`}>
+            <a onClick={() => setPortfolioSelected(false)}>About Me</a>
           </li>
-          <li className="mx-2">
-            <a>Portfolio</a>
+          <li className={`mx-2 ${portfolioSelected && "navActive"}`}>
+            <span onClick={() => setPortfolioSelected(true)}>Portfolio</span>
           </li>
           <li className="mx-2">
             <a>Contact</a>

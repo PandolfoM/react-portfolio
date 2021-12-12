@@ -1,9 +1,9 @@
 import react from "react";
 
-function About() {
+function Portfolio() {
   return (
     <section className="my-5">
-      <h1>About Me</h1>
+      <h1>Portfolio</h1>
       <div className="my-2">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -21,4 +21,4 @@ function About() {
   );
 }
 
-export default About;
+export default Portfolio;
