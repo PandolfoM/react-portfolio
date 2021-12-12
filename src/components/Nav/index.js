@@ -1,7 +1,7 @@
 import react from "react";
 
 function Nav(props) {
-  const { portfolioSelected, setPortfolioSelected } = props;
+  const tabs = ["About Me", "Portfolio", "Contact", "Resume"];
   return (
     <header className="flex-row px-1">
       <h2>
@@ -9,18 +9,17 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className={`mx-2 ${!portfolioSelected && "navActive"}`}>
-            <span onClick={() => setPortfolioSelected(false)}>About Me</span>
-          </li>
-          <li className={`mx-2 ${portfolioSelected && "navActive"}`}>
-            <span onClick={() => setPortfolioSelected(true)}>Portfolio</span>
-          </li>
-          <li className="mx-2">
-            <a>Contact</a>
-          </li>
-          <li className="mx-2">
-            <a>Resume</a>
-          </li>
+          {tabs.map((tab) => (
+            <li className="mx-2" key={tab}>
+              <span
+                onClick={() => props.setCurrentPage(tab)}
+                className={
+                  props.currentPage === tab ? "nav-link navActive" : "nav-link"
+                }>
+                {tab}
+              </span>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
