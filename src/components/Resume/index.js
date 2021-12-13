@@ -1,21 +1,73 @@
-import react from "react";
+import react, { useState } from "react";
 
 function Resume() {
+  const [frontEnd] = useState([
+    {
+      name: "HTML",
+    },
+    {
+      name: "CSS",
+    },
+    {
+      name: "JavaScript",
+    },
+    {
+      name: "jQuery",
+    },
+    {
+      name: "Responsive Design",
+    },
+    {
+      name: "React",
+    },
+    {
+      name: "CSS Libraries",
+    },
+  ]);
+
+  const [backEnd] = useState([
+    {
+      name: "APIS",
+    },
+    {
+      name: "Node",
+    },
+    {
+      name: "Express",
+    },
+    {
+      name: "MySQL, Sequelize",
+    },
+    {
+      name: "MongoDB, Mongoose",
+    },
+    {
+      name: "MERN",
+    },
+  ]);
+
   return (
     <section className="my-5">
       <h1>Resume</h1>
       <div className="my-2">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus
-          ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam
-          maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean
-          sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi
-          tristique justo vel turpis sollicitudin, et tristique velit convallis.
-          In hac habitasse platea dictumst. Phasellus mattis nunc sed orci
-          consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet
-          ultricies mollis. In hac habitasse platea dictumst.
+          Download my
+          <a href="/resume.pdf" download>
+            resume
+          </a>
         </p>
+        <h5>Front-end Proficiencies</h5>
+        <ul>
+          {frontEnd.map((front) => (
+            <li key={front.name}>{front.name}</li>
+          ))}
+        </ul>
+        <h5>Back-end Proficiencies</h5>
+        <ul>
+          {backEnd.map((back) => (
+            <li key={back.name}>{back.name}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

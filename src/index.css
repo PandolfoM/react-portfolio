@@ -34,7 +34,7 @@ body {
   min-height: 100%;
 }
 
-li {
+.noListStyle {
   list-style: none;
 }
 

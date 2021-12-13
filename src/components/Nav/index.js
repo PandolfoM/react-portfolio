@@ -10,7 +10,7 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           {tabs.map((tab) => (
-            <li className="mx-2" key={tab}>
+            <li className="noListStyle mx-2" key={tab}>
               <span
                 onClick={() => props.setCurrentPage(tab)}
                 className={
