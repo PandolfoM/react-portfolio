@@ -5,7 +5,9 @@ function Nav(props) {
   return (
     <header className="flex-row px-1">
       <h2>
-        <a href="/">PandolfoM</a>
+        <a className="noListStyle" href="/">
+          PandolfoM
+        </a>
       </h2>
       <nav>
         <ul className="flex-row">

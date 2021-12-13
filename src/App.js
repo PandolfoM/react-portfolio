@@ -4,6 +4,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("About Me");
@@ -26,6 +27,7 @@ function App() {
     <div>
       <Nav currentPage={currentPage} setCurrentPage={setCurrentPage}></Nav>
       <main>{page()}</main>
+      <Footer></Footer>
     </div>
   );
 }

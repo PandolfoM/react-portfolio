@@ -51,7 +51,7 @@ function Resume() {
       <h1>Resume</h1>
       <div className="my-2">
         <p>
-          Download my
+          Download my{" "}
           <a href="/resume.pdf" download>
             resume
           </a>
